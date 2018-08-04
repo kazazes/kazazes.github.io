@@ -5,7 +5,7 @@
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
     </span>
-    Experiences
+    Experience
   </h2>
 
   {% for experience in experiences %}
@@ -38,17 +38,17 @@
             <img class="img-card-top" src="{{ site.baseurl }}/assets/images/thumbnails/{{ link.thumbnail }} " alt="{{link.title}}" style="width: 100%">
             <div class="card-body">
               <h6 class="card-text">{{ link.title }}</h6>
-              <p class="card-text">{{ link.date }}</p>
             </div>
-            <button type="button" data-toggle="modal" data-target="#modal-{{forloop.parentloop.index}}-{{forloop.index}}" class="btn btn-success">Watch</div>
+            <button type="button" data-toggle="modal" data-target="#modal-{{forloop.parentloop.index}}-{{forloop.index}}" class="btn btn-success">Watch</button>
+          </div>
         </div>
         <div class="modal youtube-modal" id="modal-{{forloop.parentloop.index}}-{{forloop.index}}" role="dialog">
           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{link.embedId}}?rel=0&amp;showinfo=0"
-                    id="video" allowscriptaccess="always" allow="autoplay; encrypted-media">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{link.embedId}}?rel=0&amp;showinfo=0" id="video"
+                    allowscriptaccess="always" allow="autoplay; encrypted-media">
                   </iframe>
                 </div>
                 <div class="modal-footer">
@@ -56,14 +56,14 @@
                 </div>
               </div>
             </div>
-            {% endif %}
-            {% endfor %}
           </div>
         </div>
-        {% endif %}
+        {% endif %} {% endfor %}
       </div>
-      <!--//item-->
-      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
 
 </section>
 <!--//section-->

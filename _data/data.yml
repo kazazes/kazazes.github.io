@@ -112,9 +112,13 @@ experiences:
       links:
         - type: youtube
           embedId: RDRGwi9vWpM
-          date: July 12, 2012
           thumbnail: syria.jpg
           title: "Sibyl, Obama & Syria"
+        - type: youtube
+          embedId: PTQFKAMXfdc
+          thumbnail: twelect.jpg
+          title: "Twelect Update"
+        
 
 # projects:
 #     title: Projects
