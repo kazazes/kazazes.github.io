@@ -51,13 +51,21 @@
 
     {% if sidebar.stack-overflow %}
     <li class="stack-overflow"><i class="fab fa-stack-overflow"></i>
-      <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank">{{ sidebar.stack-overflow }}</a>
+      {% assign soString = sidebar.stack-overflow | split: "/" | last %}
+
+      <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank">{{ soString }}</a>
     </li>
     {% endif %}
 
     {% if sidebar.codewars %}
     <li class="codewars"><i class="fas fa-code"></i>
       <a href="https://www.codewars.com/users/{{ sidebar.codewars }}/completed_solutions" target="_blank">{{ sidebar.codewars }}</a>
+    </li>
+    {% endif %}
+
+    {% if sidebar.instagram %}
+    <li class="instagram"><i class="fab fa-instagram"></i>
+      <a href="https://instagram.com/{{ sidebar.instagram }}" target="_blank">@{{ sidebar.instagram }}</a>
     </li>
     {% endif %}
 
