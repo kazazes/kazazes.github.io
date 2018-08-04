@@ -1,9 +1,8 @@
-{% assign publications = site.data.data.publications %}
-{% if publications %}
+{% assign publications = site.data.data.publications %} {% if publications %}
 <section class="section publications-section">
 
   <h2 class="section-title">
-    <span class="fa-stack fa-xs">
+    <span class="fa-stack fa-xs mb-1 mr-2">
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
     </span>
@@ -13,16 +12,17 @@
   {% if publications.intro %}
   <div class="intro">
     {{ publications.intro | markdownify }}
-  </div><!--//intro-->
-  {% endif %}
-
-  {% for publication in publications.papers %}
+  </div>
+  <!--//intro-->
+  {% endif %} {% for publication in publications.papers %}
   <div class="item">
     <div class="publication-title">{{ publication.title }}</div>
     <div class="publication-authors">{{ publication.authors }}</div>
     <div class="publication-conference">{{ publication.conference }}</div>
-  </div><!--//item-->
+  </div>
+  <!--//item-->
   {% endfor %}
 
-</section><!--//section-->
+</section>
+<!--//section-->
 {% endif %}

@@ -161,13 +161,13 @@ p {
 
 .main-wrapper {
   background: #fff;
-  padding: 60px;
+  padding: 40px;
   padding-right: 340px;
   .section-title {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
-    color: darken($theme-color, 15%);
+    color: darken($text-grey, 15%);
     position: relative;
     margin-top: 0;
     margin-bottom: 20px;

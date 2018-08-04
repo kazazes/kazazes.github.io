@@ -114,7 +114,7 @@ experiences:
           embedId: RDRGwi9vWpM
           date: July 12, 2012
           thumbnail: syria.jpg
-          title: "Discussing Sibyl, Obama & Syria"
+          title: "Sibyl, Obama & Syria"
 
 # projects:
 #     title: Projects
@@ -163,19 +163,6 @@ experiences:
 #       - title: A syntax directed compiler for Algol 60
 #         authors: Edgar T. Irons
 #         conference: "Comm. ACM 4 (1961), 51–55"
-
-skills:
-    title: My Toolbox
-
-    toolset:
-      - name: Typescript
-        level: 100%
-
-      - name: GraphQL
-        level: 95%
-
-      - name: Vue.js
-        level: 90%
 
 footer: >
 
