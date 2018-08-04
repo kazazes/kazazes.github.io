@@ -1,5 +1,4 @@
-{% assign experiences = site.data.data.experiences %}
-{% if experiences %}
+{% assign experiences = site.data.data.experiences %} {% if experiences %}
 <section class="section experiences-section">
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
@@ -17,21 +16,60 @@
       <div class="upper-row">
         <h3 class="job-title">{{ experience.role }}</h3>
         <div class="time">{{ experience.time }}</div>
-      </div><!--//upper-row-->
+      </div>
+      <!--//upper-row-->
 
       <div class="company">{{ experience.company }}</div>
 
-    </div><!--//meta-->
+    </div>
+    <!--//meta-->
 
     {% if experience.details %}
     <div class="details">
       {{ experience.details | markdownify }}
-    </div><!--//details-->
-    {% endif %}
+    </div>
+    <!--//details-->
+    {% endif %} {% if experience.links %}
+    <div class="links">
+      <div class="row">
+        {% for link in experience.links %} {% if link.type == "youtube" %}
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img src="{{ site.baseurl }}/assets/images/thumbnails/{{ link.thumbnail }} " alt="{{link.title}}">
+            <div class="caption">
+              <h5>{{ link.title }}</h5>
+              <p>{{ link.date }}</p>
+            </div>
+            <button type="button" data-toggle="modal" data-target="#modal-{{forloop.parentloop.index}}-{{forloop.index}}" class="btn btn-success">Watch</div>
+        </div>
+        <div class="modal fade youtube-modal" id="modal-{{forloop.parentloop.index}}-{{forloop.index}}" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">{{link.title}}</h4>
+              </div>
+              <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{link.embedId}}?rel=0" id="video" allowscriptaccess="always"
+                    allow="autoplay; encrypted-media">
+                  </iframe>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      <!--//item-->
+      {% endfor %}
 
-  </div><!--//item-->
-  {% endfor %}
-
-</section><!--//section-->
+</section>
+<!--//section-->
 {% endif %}
-

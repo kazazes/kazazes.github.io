@@ -109,6 +109,12 @@ experiences:
       details: |
         - Appeared weekly on prime time morning coverage to present and discuss fluctuations in Sibyl Vision's opinion monitoring in light of the day's news
         - Featured on specials including Election Night 2012 to demonstrate Sibyl Vision's live modeling of public opinion, exit poll, and demographic data, in conjunction with our continually evolving election outcome predictions
+      links:
+        - type: youtube
+          embedId: RDRGwi9vWpM
+          date: July 12, 2012
+          thumbnail: syria.jpg
+          title: "Discussing Sibyl, Obama & Syria"
 
 # projects:
 #     title: Projects
