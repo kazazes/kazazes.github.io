@@ -146,7 +146,6 @@ h6 {
 }
 
 .main-wrapper {
-  background:
   padding: 40px;
   padding-right: 340px;
 }
@@ -344,7 +343,7 @@ h6 {
   .skillset .level-bar-inner {
     background-color: black !important;
     -webkit-print-color-adjust: exact;
-  }¡
+  }
 }
 
 html,
@@ -382,7 +381,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #054A7F;
+  background: #054a7f;
 }
 
 .ocean .wave {
