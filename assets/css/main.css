@@ -21,10 +21,10 @@ h6 {
   background: #0984e3;
   position: absolute;
   right: 0;
-  width: 280px;
-  height: 100%;
-  min-height: 550px;
+  width: 330px;
+  min-height: 100vh;
   color: #fff;
+  z-index: 5;
 }
 
 .sidebar-wrapper a {
